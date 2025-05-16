@@ -1,0 +1,178 @@
+{
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "contact": "Contact",
+      "bookConsultation": "Book Consultation"
+    },
+    "home": {
+      "hero": {
+        "title": "Natural Healing Through Ancient Wisdom",
+        "subtitle": "Experience authentic Ayurvedic treatments tailored to restore balance and promote holistic wellness in your life.",
+        "exploreTreatments": "Explore Our Treatments",
+        "contactUs": "Contact Us"
+      },
+      "treatments": {
+        "title": "Our Specialized Treatments",
+        "subtitle": "Discover our range of authentic treatments designed to address various health concerns.",
+        "arthritis": {
+          "title": "Arthritis Treatment",
+          "description": "Traditional therapies to reduce inflammation and improve joint mobility."
+        },
+        "backPain": {
+          "title": "Back Pain Relief",
+          "description": "Specialized massages and herbal applications to alleviate chronic back pain."
+        },
+        "spa": {
+          "title": "Luxury Spa Therapy",
+          "description": "Premium relaxation treatments combining ancient techniques with modern comfort."
+        },
+        "viewAll": "View All Treatments"
+      },
+      "about": {
+        "title": "Ancient Wisdom, Modern Care",
+        "paragraph1": "Our center combines traditional Ayurvedic principles with contemporary medical understanding to provide effective, holistic treatments for a wide range of health conditions.",
+        "paragraph2": "With decades of experience, our practitioners are dedicated to helping you achieve optimal health through natural, time-tested methods that address the root causes of illness.",
+        "learnMore": "Learn About Us"
+      },
+      "testimonials": {
+        "title": "What Our Patients Say",
+        "subtitle": "Read about the experiences of those who have benefited from our treatments."
+      },
+      "contact": {
+        "title": "Visit Our Center",
+        "subtitle": "We're conveniently located to serve patients from across Sri Lanka. Reach out to schedule a consultation or learn more about our treatments.",
+        "contactInfo": "Contact",
+        "hours": "Hours",
+        "location": "Location",
+        "contactUs": "Contact Us"
+      }
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Discover our comprehensive range of authentic Ayurvedic treatments and premium spa services.",
+      "ayurvedic": {
+        "title": "Ayurvedic Treatments",
+        "description": "Traditional therapies based on ancient wisdom to address various health concerns and promote holistic wellness.",
+        "treatments": [
+          "Arthritis and Joint Pain Relief",
+          "Back and Neck Pain Treatment",
+          "Skin Conditions (Psoriasis, Eczema)",
+          "Paralysis and Neurological Disorders",
+          "Respiratory Conditions (Asthma, Sinusitis)",
+          "Diabetes Management"
+        ],
+        "exploreButton": "Explore Ayurvedic Treatments"
+      },
+      "spa": {
+        "title": "Premium Luxury Spa",
+        "description": "Indulgent spa experiences that combine traditional techniques with modern luxury for ultimate relaxation.",
+        "treatments": [
+          "Herbal Oil Massages",
+          "Aromatherapy Treatments",
+          "Detoxification Programs",
+          "Stress Relief Therapies",
+          "Beauty Treatments",
+          "Couples Spa Packages"
+        ],
+        "exploreButton": "Explore Spa Services"
+      },
+      "backToServices": "Back to Services",
+      "inquireButton": "Inquire About This Treatment",
+      "bookButton": "Book This Experience"
+    },
+    "about": {
+      "title": "About Our Center",
+      "subtitle": "Discover our journey, philosophy, and commitment to authentic Ayurvedic healing.",
+      "story": {
+        "title": "Our Story",
+        "paragraph1": "Founded in 2005 by Dr. Rajitha Perera, our center began with a vision to preserve and promote the authentic practice of Ayurveda in Sri Lanka. With a deep respect for traditional knowledge and a commitment to integrating modern understanding, we have grown to become one of the most trusted Ayurvedic centers in the country.",
+        "paragraph2": "Over the years, we have helped thousands of patients find relief from various health conditions through our holistic approach to wellness. Our success is built on our unwavering dedication to authenticity, quality, and personalized care."
+      },
+      "philosophy": {
+        "title": "Our Philosophy",
+        "subtitle": "We believe in the timeless wisdom of Ayurveda and its power to heal, restore, and maintain health.",
+        "holistic": {
+          "title": "Holistic Approach",
+          "description": "We treat the whole person—body, mind, and spirit—not just isolated symptoms. Our approach addresses the root causes of illness to promote complete healing and prevent recurrence."
+        },
+        "authentic": {
+          "title": "Authentic Practices",
+          "description": "We adhere to traditional Ayurvedic principles and practices, using authentic herbs, oils, and techniques passed down through generations of practitioners."
+        },
+        "personalized": {
+          "title": "Personalized Care",
+          "description": "We recognize that each person is unique, with their own constitution and health needs. Our treatments are carefully tailored to address individual requirements."
+        }
+      },
+      "team": {
+        "title": "Our Team",
+        "subtitle": "Meet our experienced practitioners dedicated to your health and wellbeing.",
+        "members": [
+          {
+            "name": "Dr. Rajitha Perera",
+            "role": "Founder & Chief Physician",
+            "bio": "With over 30 years of experience in Ayurvedic medicine, Dr. Perera specializes in treating chronic conditions and has received numerous awards for his contributions to traditional medicine."
+          },
+          {
+            "name": "Dr. Amali Silva",
+            "role": "Senior Physician",
+            "bio": "Dr. Silva specializes in women's health and skin conditions. Her gentle approach and deep knowledge of herbal remedies have helped countless patients achieve optimal health."
+          },
+          {
+            "name": "Dr. Nimal Jayawardena",
+            "role": "Specialist in Musculoskeletal Disorders",
+            "bio": "Dr. Jayawardena has dedicated his career to treating arthritis, back pain, and other musculoskeletal conditions using traditional Ayurvedic methods combined with modern rehabilitation techniques."
+          }
+        ]
+      },
+      "facility": {
+        "title": "Our Facility",
+        "paragraph1": "Our center is designed to provide a serene, healing environment where traditional practices meet modern comfort. Set in a tranquil location, our facility features private treatment rooms, consultation spaces, a herbal dispensary, and relaxation areas.",
+        "paragraph2": "We maintain the highest standards of cleanliness and hygiene while creating a warm, welcoming atmosphere that supports the healing process. Our center is equipped with both traditional Ayurvedic treatment equipment and modern amenities to ensure your comfort and care.",
+        "scheduleVisit": "Schedule a Visit"
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "Reach out to schedule a consultation or learn more about our treatments.",
+      "getInTouch": {
+        "title": "Get in Touch",
+        "subtitle": "We're here to answer your questions and help you find the right treatment for your needs.",
+        "phone": "Phone",
+        "email": "Email",
+        "hours": "Hours",
+        "address": "Address",
+        "responseTime": "We respond within 24 hours"
+      },
+      "form": {
+        "title": "Contact Form",
+        "subtitle": "Fill out the form below and we'll get back to you as soon as possible.",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "phone": "Phone",
+        "inquiryType": "Inquiry Type",
+        "consultation": "Consultation",
+        "treatmentInfo": "Treatment Information",
+        "other": "Other",
+        "message": "Message",
+        "messagePlaceholder": "Please describe your inquiry or health concern",
+        "submit": "Send Message"
+      }
+    },
+    "footer": {
+      "description": "Authentic Ayurvedic treatments for holistic wellness and healing.",
+      "quickLinks": "Quick Links",
+      "treatments": "Treatments",
+      "contactUs": "Contact Us",
+      "rights": "All rights reserved."
+    },
+    "language": {
+      "en": "English",
+      "si": "සිංහල",
+      "ta": "தமிழ்"
+    }
+  }
+  
