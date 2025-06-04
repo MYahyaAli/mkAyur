@@ -7,7 +7,10 @@ import { Leaf, Sparkles, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import { useMounted } from "@/hooks/use-mounted";
 import ayurTreatment from "../../public/images/treatment-4.jpg";
-import spaTreatment from "../../public/images/spa-treatment.jpg";
+import spaTreatment from "../../public/images/treatment-7.jpg";
+
+// Define types for the treatment data
+type TreatmentItem = string | { name: string; description?: string };
 
 export default function ServicesPage() {
   const { t } = useLanguage();
@@ -24,6 +27,47 @@ export default function ServicesPage() {
       </div>
     );
   }
+
+  // Helper function to safely get treatments as an array
+  const getTreatments = (key: string): TreatmentItem[] => {
+    const treatments = t(key);
+    // Check if treatments is an array
+    if (Array.isArray(treatments)) {
+      return treatments;
+    }
+    // If it's not an array, return an empty array to avoid errors
+    console.warn(`Expected array for ${key}, got:`, treatments);
+    return [];
+  };
+
+  // Render a treatment item with proper type checking
+  const renderTreatmentItem = (treatment: TreatmentItem, index: number) => {
+    // If treatment is an object with name property
+    if (
+      typeof treatment === "object" &&
+      treatment !== null &&
+      "name" in treatment
+    ) {
+      return (
+        <li key={index} className="flex items-start gap-2">
+          <span className="text-primary">•</span>
+          <span className="text-muted-foreground">{treatment.name}</span>
+        </li>
+      );
+    }
+
+    // If treatment is a string
+    return (
+      <li key={index} className="flex items-start gap-2">
+        <span className="text-primary">•</span>
+        <span className="text-muted-foreground">{treatment}</span>
+      </li>
+    );
+  };
+
+  // Get treatments arrays safely
+  const ayurvedicTreatments = getTreatments("services.ayurvedic.treatments");
+  const spaTreatments = getTreatments("services.spa.treatments");
 
   return (
     <main className="flex-1 mx-5">
@@ -63,15 +107,8 @@ export default function ServicesPage() {
                   </p>
                 </div>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6 flex-1">
-                  {t("services.ayurvedic.treatments").map(
-                    (treatment: string, index: number) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <span className="text-primary">•</span>
-                        <span className="text-muted-foreground">
-                          {treatment}
-                        </span>
-                      </li>
-                    )
+                  {ayurvedicTreatments.map((treatment, index) =>
+                    renderTreatmentItem(treatment, index)
                   )}
                 </ul>
                 <div className="mt-auto">
@@ -108,15 +145,8 @@ export default function ServicesPage() {
                   </p>
                 </div>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6 flex-1">
-                  {t("services.spa.treatments").map(
-                    (treatment: string, index: number) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <span className="text-primary">•</span>
-                        <span className="text-muted-foreground">
-                          {treatment}
-                        </span>
-                      </li>
-                    )
+                  {spaTreatments.map((treatment, index) =>
+                    renderTreatmentItem(treatment, index)
                   )}
                 </ul>
                 <div className="mt-auto">

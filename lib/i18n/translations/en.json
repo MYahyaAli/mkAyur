@@ -56,12 +56,30 @@
         "title": "Ayurvedic Treatments",
         "description": "Traditional therapies based on ancient wisdom to address various health concerns and promote holistic wellness.",
         "treatments": [
-          "Arthritis and Joint Pain Relief",
-          "Back and Neck Pain Treatment",
-          "Skin Conditions (Psoriasis, Eczema)",
-          "Paralysis and Neurological Disorders",
-          "Respiratory Conditions (Asthma, Sinusitis)",
-          "Diabetes Management"
+          {
+            "name":"Arthritis and Joint Pain Relief",
+            "description":"Effective Ayurvedic therapies designed to alleviate arthritis and joint pain through a combination of herbal oil massages, steam treatments, and specialized exercises, promoting flexibility and reducing inflammation."
+          },
+          {
+            "name":"Back and Neck Pain Treatmen",
+            "description":"A specialized Ayurvedic therapy targeting chronic back and neck pain using herbal oils, therapeutic massage, and heat treatments to relieve discomfort and enhance mobility."
+          },
+          {
+            "name":"Skin Conditions (Psoriasis, Eczema)",
+            "description":"Personalized Ayurvedic treatments that use herbal pastes, medicated oils, and detoxification therapies to soothe and manage chronic skin conditions like psoriasis and eczema."
+          },
+          {
+            "name":"Paralysis and Neurological Disorders",
+            "description":"Comprehensive Ayurvedic therapies including Abhyanga, Shirodhara, and Panchakarma, designed to support recovery and improve mobility in patients with paralysis and neurological disorders."
+          },
+          {
+            "name":"Respiratory Conditions (Asthma, Sinusitis)",
+            "description":"Natural Ayurvedic treatments using herbal steam inhalation, nasal cleansing, and medicated oils to alleviate respiratory issues like asthma and sinusitis."
+          },
+          {
+            "name":"Diabetes Management",
+            "description":"Holistic Ayurvedic programs combining herbal remedies, personalized diet plans, and lifestyle guidance to effectively manage blood sugar levels and improve overall health."
+          }
         ],
         "exploreButton": "Explore Ayurvedic Treatments"
       },
@@ -69,12 +87,30 @@
         "title": "Premium Luxury Spa",
         "description": "Indulgent spa experiences that combine traditional techniques with modern luxury for ultimate relaxation.",
         "treatments": [
-          "Herbal Oil Massages",
-          "Aromatherapy Treatments",
-          "Detoxification Programs",
-          "Stress Relief Therapies",
-          "Beauty Treatments",
-          "Couples Spa Packages"
+          {
+            "name":"Herbal Oil Massages",
+            "description":"Rejuvenating full-body massages using warm, herbal oils chosen for their therapeutic properties, relieving muscle tension and promoting deep relaxation."
+          },
+          {
+            "name":"Aromatherapy Treatments",
+            "description":"Calming spa therapies using essential oils carefully selected for their soothing aromas, providing stress relief and emotional balance."
+          },
+          {
+            "name":"Detoxification Programs",
+            "description":"Complete body detox programs that combine steam baths, herbal scrubs, and cleansing massages to eliminate toxins and revitalize your body"
+          },
+          {
+            "name":"Stress Relief Therapies",
+            "description":"Tailored spa treatments using a blend of gentle massages, soothing aromas, and calming music to melt away stress and restore inner peace."
+          },
+          {
+            "name":"Beauty Treatments",
+            "description":"Luxurious spa sessions focusing on skincare, including facials, body scrubs, and anti-aging treatments, leaving you radiant and refreshed."
+          },
+          {
+            "name":"Couples Spa Packages",
+            "description":"Exquisite spa experiences for couples, featuring relaxing massages, aromatic baths, and personalized treatments for a memorable bonding experience."
+          }
         ],
         "exploreButton": "Explore Spa Services"
       },

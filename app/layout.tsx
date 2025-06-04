@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <div className="mx-auto shadow-sm my-4 rounded-lg overflow-hidden">
               <div className="flex flex-col min-h-screen">
                 <Header />
-                {children}
+                <main className="flex-grow">{children}</main>
                 <Footer />
               </div>
             </div>

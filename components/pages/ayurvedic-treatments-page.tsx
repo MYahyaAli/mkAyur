@@ -126,7 +126,9 @@ export default function AyurvedicTreatmentsPage() {
               <div
                 key={treatment.id}
                 id={treatment.id}
-                ref={(el) => (scrollRefs.current[treatment.id] = el)}
+                ref={(el) => {
+                  scrollRefs.current[treatment.id] = el;
+                }}
                 className="bg-card rounded-lg overflow-hidden shadow-sm border scroll-mt-20"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2">

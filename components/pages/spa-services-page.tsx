@@ -126,7 +126,9 @@ export default function SpaServicesPage() {
               <div
                 key={service.id}
                 id={service.id}
-                ref={(el) => (scrollRefs.current[service.id] = el)}
+                ref={(el) => {
+                  scrollRefs.current[service.id] = el;
+                }}
                 className="bg-card rounded-lg overflow-hidden shadow-sm border scroll-mt-20"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2">
