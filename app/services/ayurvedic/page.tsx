@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import AyurvedicTreatmentsPage from "@/components/pages/ayurvedic-treatments-page";
 
 export const metadata: Metadata = {
@@ -8,5 +9,11 @@ export const metadata: Metadata = {
 };
 
 export default function AyurvedicTreatments() {
-  return <AyurvedicTreatmentsPage />;
+  return (
+    <Suspense
+      fallback={<div className="p-8 text-center text-muted">Loading...</div>}
+    >
+      <AyurvedicTreatmentsPage />
+    </Suspense>
+  );
 }
