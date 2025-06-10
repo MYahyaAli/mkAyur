@@ -1,32 +1,31 @@
-import "./globals.css";
-import type { ReactNode } from "react";
-import { Inter } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
-import { LanguageProvider } from "@/lib/i18n";
+import type React from "react";
 import type { Metadata } from "next";
-
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import { ThemeProvider } from "@/components/theme-provider";
+import { LanguageProvider } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: "MK Kerala Ayurveda | Authentic Ayurvedic Treatments",
   description:
-    "Authentic Ayurvedic treatments for holistic wellness and healing",
+    "Experience authentic ayurvedic treatments for arthritis, back pain, skin diseases, and more at MK Kerala Ayurveda in Sri Lanka.",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+      <body>
+        <ThemeProvider defaultTheme="light" enableSystem>
           <LanguageProvider>
-            <div className="mx-auto shadow-sm my-4 rounded-lg overflow-hidden">
-              <div className="flex flex-col min-h-screen">
-                <Header />
-                <main className="flex-grow">{children}</main>
-                <Footer />
-              </div>
+            <div className="flex min-h-screen flex-col">
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
             </div>
           </LanguageProvider>
         </ThemeProvider>

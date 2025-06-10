@@ -13,7 +13,7 @@ import {
 import { useLanguage } from "@/lib/i18n";
 import { useMounted } from "@/hooks/use-mounted";
 
-export function Footer() {
+export default function Footer() {
   const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
   const mounted = useMounted();
@@ -80,7 +80,7 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative overflow-hidden rounded-full">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo.jpg"
                   alt="MK Kerala Ayurveda Logo"
                   width={50}
                   height={50}
