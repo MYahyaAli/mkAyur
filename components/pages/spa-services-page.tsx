@@ -16,6 +16,11 @@ import { useLanguage } from "@/lib/i18n";
 import { useMounted } from "@/hooks/use-mounted";
 import { useState, useEffect } from "react";
 
+import spaFacial from "../../public/images/spaFacial.jpg";
+import spaJacuzzi from "../../public/images/spaJaqquzi.jpg";
+import spaFootMassage from "../../public/images/spaFootMassage.jpg";
+import spaHeadMassage from "../../public/images/spaHeadMassage.jpg";
+
 export default function SpaServicesPage() {
   const { t } = useLanguage();
   const mounted = useMounted();
@@ -47,7 +52,7 @@ export default function SpaServicesPage() {
         "Indulge in a deeply relaxing massage using premium essential oils that soothe your mind and rejuvenate your body.",
       duration: "60-90 minutes",
       price: "From $120",
-      image: "/placeholder.svg?height=400&width=600",
+      image:spaFacial,
       benefits: [
         "Stress relief",
         "Improved circulation",
@@ -64,7 +69,7 @@ export default function SpaServicesPage() {
         "Experience the healing power of heated volcanic stones that melt away tension and promote deep relaxation.",
       duration: "75 minutes",
       price: "From $150",
-      image: "/placeholder.svg?height=400&width=600",
+      image: spaJacuzzi,
       benefits: [
         "Deep muscle relief",
         "Improved blood flow",
@@ -81,7 +86,7 @@ export default function SpaServicesPage() {
         "Revitalize your skin with our signature facial treatment using natural ingredients and advanced techniques.",
       duration: "60 minutes",
       price: "From $100",
-      image: "/placeholder.svg?height=400&width=600",
+      image: spaFootMassage,
       benefits: [
         "Skin hydration",
         "Anti-aging",
@@ -98,7 +103,7 @@ export default function SpaServicesPage() {
         "Share a blissful spa experience with your loved one in our private couples suite with synchronized treatments.",
       duration: "2 hours",
       price: "From $300",
-      image: "/placeholder.svg?height=400&width=600",
+      image:spaHeadMassage,
       benefits: [
         "Private suite",
         "Synchronized treatments",
@@ -115,7 +120,7 @@ export default function SpaServicesPage() {
         "Purify and nourish your skin with our detoxifying body wrap using natural herbs and minerals.",
       duration: "90 minutes",
       price: "From $130",
-      image: "/placeholder.svg?height=400&width=600",
+      image: spaJacuzzi,
       benefits: [
         "Skin detoxification",
         "Improved texture",
@@ -132,7 +137,7 @@ export default function SpaServicesPage() {
         "Restore balance and promote healing through targeted pressure point therapy on your feet and hands.",
       duration: "45 minutes",
       price: "From $80",
-      image: "/placeholder.svg?height=400&width=600",
+      image: spaFacial,
       benefits: [
         "Improved circulation",
         "Stress relief",

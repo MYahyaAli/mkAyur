@@ -8,6 +8,7 @@ import { useLanguage } from "@/lib/i18n";
 import { useMounted } from "@/hooks/use-mounted";
 import { useEffect, useState } from "react";
 import aboutImage from "../../public/images/treatment-6.jpg";
+import profile from "../../public/images/dp.jpg";
 
 export default function AboutPage() {
   const { t } = useLanguage();
@@ -188,7 +189,7 @@ export default function AboutPage() {
               >
                 <div className="relative w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 group-hover:scale-105 transition-transform duration-300">
                   <Image
-                    src="/placeholder.svg?height=128&width=128"
+                    src={profile || "/placeholder.svg"}
                     alt={t(`about.team.members.${index}.name`)}
                     fill
                     className="object-cover"
@@ -222,7 +223,7 @@ export default function AboutPage() {
             >
               <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl group">
                 <Image
-                  src="/placeholder.svg?height=800&width=600"
+                  src={aboutImage || "/placeholder.svg"}
                   alt="Our facility"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"

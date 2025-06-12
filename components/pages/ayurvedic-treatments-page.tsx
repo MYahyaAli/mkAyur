@@ -24,6 +24,11 @@ import { useLanguage } from "@/lib/i18n";
 import { useMounted } from "@/hooks/use-mounted";
 import { useState, useEffect } from "react";
 
+import spaFacial from "../../public/images/spaFacial.jpg";
+import spaJacuzzi from "../../public/images/spaJaqquzi.jpg";
+import spaFootMassage from "../../public/images/spaFootMassage.jpg";
+import spaHeadMassage from "../../public/images/spaHeadMassage.jpg";
+
 export default function AyurvedicTreatmentsPage() {
   const { t } = useLanguage();
   const mounted = useMounted();
@@ -60,7 +65,7 @@ export default function AyurvedicTreatmentsPage() {
         "Stress",
         "Toxin buildup",
       ],
-      image: "/placeholder.svg?height=400&width=600",
+      image: spaFacial,
       benefits: [
         "Complete detox",
         "Improved immunity",
@@ -77,7 +82,7 @@ export default function AyurvedicTreatmentsPage() {
         "A deeply relaxing treatment where warm herbal oil is continuously poured over the forehead to calm the nervous system.",
       duration: "45-60 minutes",
       conditions: ["Anxiety", "Insomnia", "Stress", "Headaches"],
-      image: "/placeholder.svg?height=400&width=600",
+      image: spaJacuzzi,
       benefits: [
         "Deep relaxation",
         "Better sleep",
@@ -99,7 +104,7 @@ export default function AyurvedicTreatmentsPage() {
         "Fatigue",
         "Joint stiffness",
       ],
-      image: "/placeholder.svg?height=400&width=600",
+      image: spaJacuzzi,
       benefits: [
         "Improved circulation",
         "Muscle relaxation",
@@ -121,7 +126,7 @@ export default function AyurvedicTreatmentsPage() {
         "Muscle stiffness",
         "Inflammation",
       ],
-      image: "/placeholder.svg?height=400&width=600",
+      image: spaFootMassage,
       benefits: [
         "Pain relief",
         "Reduced inflammation",
@@ -138,7 +143,7 @@ export default function AyurvedicTreatmentsPage() {
         "Specialized treatment involving medicated oils administered through the nasal passages to treat respiratory and neurological conditions.",
       duration: "30-45 minutes",
       conditions: ["Sinusitis", "Allergies", "Headaches", "Respiratory issues"],
-      image: "/placeholder.svg?height=400&width=600",
+      image: spaHeadMassage,
       benefits: [
         "Clear breathing",
         "Reduced allergies",
@@ -160,7 +165,7 @@ export default function AyurvedicTreatmentsPage() {
         "Skin issues",
         "Cellulite",
       ],
-      image: "/placeholder.svg?height=400&width=600",
+      image: spaFacial,
       benefits: [
         "Weight reduction",
         "Improved skin",
