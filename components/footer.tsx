@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import { useMounted } from "@/hooks/use-mounted";
+import logoImg from "@/assets/images/logo.jpg";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -80,7 +81,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative overflow-hidden rounded-full">
                 <Image
-                  src="/images/logo.jpg"
+                  src={logoImg}
                   alt="MK Kerala Ayurveda Logo"
                   width={50}
                   height={50}

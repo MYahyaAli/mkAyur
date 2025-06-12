@@ -15,12 +15,12 @@ import { Phone, Clock, MapPin, ArrowRight, Quote, Star } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import { useMounted } from "@/hooks/use-mounted";
 import { useEffect, useState } from "react";
-import heroImage from "../../public/images/treatment-3.jpg";
-import arthritisImage from "../../public/images/treatment-1.jpg";
-import backpainImage from "../../public/images/treatment-5.jpg";
-import spaImage from "../../public/images/treatment-7.jpg";
-import aboutImage from "../../public/images/treatment-6.jpg";
-import contactImage from "../../public/images/treatment-4.jpg";
+import heroImage from "@/assets/images/treatment-3.jpg";
+import arthritisImage from "@/assets/images/treatment-1.jpg";
+import backpainImage from "@/assets/images/treatment-5.jpg";
+import spaImage from "@/assets/images/treatment-7.jpg";
+import aboutImage from "@/assets/images/treatment-6.jpg";
+import contactImage from "@/assets/images/treatment-4.jpg";
 
 export default function HomePage() {
   const { t } = useLanguage();

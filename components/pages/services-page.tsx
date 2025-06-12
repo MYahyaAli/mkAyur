@@ -7,8 +7,8 @@ import { Leaf, Sparkles, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import { useMounted } from "@/hooks/use-mounted";
 import { useState, useEffect } from "react";
-import ayurTreatment from "../../public/images/treatment-4.jpg";
-import spaTreatment from "../../public/images/treatment-7.jpg";
+import ayurTreatment from "@/assets/images/treatment-4.jpg";
+import spaTreatment from "@/assets/images/treatment-7.jpg";
 
 // Define types for the treatment data
 type TreatmentItem = string | { name: string; description?: string };

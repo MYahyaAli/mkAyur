@@ -7,8 +7,8 @@ import { CheckCircle2, Users, Leaf } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import { useMounted } from "@/hooks/use-mounted";
 import { useEffect, useState } from "react";
-import aboutImage from "../../public/images/treatment-6.jpg";
-import profile from "../../public/images/dp.jpg";
+import aboutImage from "@/assets/images/treatment-6.jpg";
+import profile from "@/assets/images/dp.jpg";
 
 export default function AboutPage() {
   const { t } = useLanguage();

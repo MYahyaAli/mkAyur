@@ -16,10 +16,10 @@ import { useLanguage } from "@/lib/i18n";
 import { useMounted } from "@/hooks/use-mounted";
 import { useState, useEffect } from "react";
 
-import spaFacial from "../../public/images/spaFacial.jpg";
-import spaJacuzzi from "../../public/images/spaJaqquzi.jpg";
-import spaFootMassage from "../../public/images/spaFootMassage.jpg";
-import spaHeadMassage from "../../public/images/spaHeadMassage.jpg";
+import spaFacial from "@/assets/images/spaFacial.jpg";
+import spaJacuzzi from "@/assets/images/spaJaqquzi.jpg";
+import spaFootMassage from "@/assets/images/spaFootMassage.jpg";
+import spaHeadMassage from "@/assets/images/spaHeadMassage.jpg";
 
 export default function SpaServicesPage() {
   const { t } = useLanguage();
