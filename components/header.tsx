@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 import { useMounted } from "@/hooks/use-mounted";
 import logoImg from "@/assets/images/logo.jpg";
 
-export default function Header() {
+export default function Header() { 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { t } = useLanguage();
