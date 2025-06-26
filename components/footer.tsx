@@ -21,25 +21,25 @@ export default function Footer() {
 
   if (!mounted) {
     return (
-      <footer className="w-full border-t border-border bg-muted py-12">
+      <footer className="w-full border-t border-white/20 bg-primary py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[1, 2, 3, 4].map((i) => (
               <div key={i} className="space-y-4">
-                <div className="h-6 w-32 bg-muted-foreground/20 rounded animate-pulse"></div>
+                <div className="h-6 w-32 bg-white/20 rounded animate-pulse"></div>
                 <div className="space-y-2">
                   {[1, 2, 3].map((j) => (
                     <div
                       key={j}
-                      className="h-4 w-full bg-muted-foreground/20 rounded animate-pulse"
+                      className="h-4 w-full bg-white/20 rounded animate-pulse"
                     ></div>
                   ))}
                 </div>
               </div>
             ))}
           </div>
-          <div className="mt-12 pt-8 border-t border-border text-center">
-            <div className="h-4 w-64 mx-auto bg-muted-foreground/20 rounded animate-pulse"></div>
+          <div className="mt-12 pt-8 border-t border-white/20 text-center">
+            <div className="h-4 w-64 mx-auto bg-white/20 rounded animate-pulse"></div>
           </div>
         </div>
       </footer>
@@ -73,7 +73,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full border-t border-border bg-gradient-to-br from-muted/50 via-muted to-muted/50 py-16">
+    <footer className="w-full border-t border-white/20 bg-primary py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand Section */}
@@ -81,18 +81,18 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative overflow-hidden rounded-full">
                 <Image
-                  src={logoImg}
+                  src={logoImg || "/placeholder.svg"}
                   alt="MK Kerala Ayurveda Logo"
                   width={50}
                   height={50}
                   className="rounded-full transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
-              <span className="text-lg font-semibold text-primary group-hover:text-primary/80 transition-colors">
+              <span className="text-lg font-semibold text-white group-hover:text-white/90 transition-colors">
                 MK Kerala Ayurveda
               </span>
             </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
+            <p className="text-sm text-white/80 leading-relaxed max-w-sm">
               {t("footer.description")}
             </p>
             <div className="flex gap-4">
@@ -100,7 +100,7 @@ export default function Footer() {
                 <Link
                   key={social.label}
                   href={social.href}
-                  className="p-2 rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200 hover:scale-110"
+                  className="p-2 rounded-lg bg-white/10 text-white hover:bg-white hover:text-primary transition-all duration-200 hover:scale-110"
                   aria-label={social.label}
                 >
                   <social.icon className="h-4 w-4" />
@@ -111,7 +111,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold text-primary mb-6 flex items-center gap-2">
+            <h3 className="text-sm font-semibold text-white mb-6 flex items-center gap-2">
               <ArrowRight className="h-4 w-4" />
               {t("footer.quickLinks")}
             </h3>
@@ -120,9 +120,9 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-all duration-200 hover:translate-x-1 flex items-center gap-2 group"
+                    className="text-sm text-white/80 hover:text-white transition-all duration-200 hover:translate-x-1 flex items-center gap-2 group"
                   >
-                    <div className="w-1 h-1 bg-primary/60 rounded-full group-hover:bg-primary transition-colors" />
+                    <div className="w-1 h-1 bg-white/60 rounded-full group-hover:bg-white transition-colors" />
                     {link.name}
                   </Link>
                 </li>
@@ -132,7 +132,7 @@ export default function Footer() {
 
           {/* Treatments */}
           <div>
-            <h3 className="text-sm font-semibold text-primary mb-6 flex items-center gap-2">
+            <h3 className="text-sm font-semibold text-white mb-6 flex items-center gap-2">
               <ArrowRight className="h-4 w-4" />
               {t("footer.treatments")}
             </h3>
@@ -141,9 +141,9 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-all duration-200 hover:translate-x-1 flex items-center gap-2 group"
+                    className="text-sm text-white/80 hover:text-white transition-all duration-200 hover:translate-x-1 flex items-center gap-2 group"
                   >
-                    <div className="w-1 h-1 bg-primary/60 rounded-full group-hover:bg-primary transition-colors" />
+                    <div className="w-1 h-1 bg-white/60 rounded-full group-hover:bg-white transition-colors" />
                     {link.name}
                   </Link>
                 </li>
@@ -153,32 +153,30 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-sm font-semibold text-primary mb-6 flex items-center gap-2">
+            <h3 className="text-sm font-semibold text-white mb-6 flex items-center gap-2">
               <ArrowRight className="h-4 w-4" />
               {t("footer.contactUs")}
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 group">
-                <div className="p-1.5 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                  <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
+                <div className="p-1.5 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors">
+                  <MapPin className="h-4 w-4 text-white flex-shrink-0" />
                 </div>
-                <span className="text-sm text-muted-foreground leading-relaxed">
+                <span className="text-sm text-white/80 leading-relaxed">
                   123 Ayurveda Road, Colombo 05, Sri Lanka
                 </span>
               </li>
               <li className="flex items-start gap-3 group">
-                <div className="p-1.5 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                  <Phone className="h-4 w-4 text-primary flex-shrink-0" />
+                <div className="p-1.5 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors">
+                  <Phone className="h-4 w-4 text-white flex-shrink-0" />
                 </div>
-                <span className="text-sm text-muted-foreground">
-                  +94 11 234 5678
-                </span>
+                <span className="text-sm text-white/80">+94 11 234 5678</span>
               </li>
               <li className="flex items-start gap-3 group">
-                <div className="p-1.5 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                  <Mail className="h-4 w-4 text-primary flex-shrink-0" />
+                <div className="p-1.5 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors">
+                  <Mail className="h-4 w-4 text-white flex-shrink-0" />
                 </div>
-                <span className="text-sm text-muted-foreground">
+                <span className="text-sm text-white/80">
                   info@mkayurveda.com
                 </span>
               </li>
@@ -186,8 +184,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border text-center">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-12 pt-8 border-t border-white/20 text-center">
+          <p className="text-sm text-white/80">
             © {currentYear} MK Kerala Ayurveda. {t("footer.rights")}
           </p>
         </div>

@@ -80,7 +80,7 @@ export default function AyurvedicTreatmentsPage() {
       title: "Shirodhara Therapy",
       description:
         "A deeply relaxing treatment where warm herbal oil is continuously poured over the forehead to calm the nervous system.",
-      duration: "45-60 minutes",
+      duration: "5-7 days",
       conditions: ["Anxiety", "Insomnia", "Stress", "Headaches"],
       image: spaJacuzzi,
       benefits: [
@@ -97,7 +97,7 @@ export default function AyurvedicTreatmentsPage() {
       title: "Abhyanga Full Body Massage",
       description:
         "Traditional Ayurvedic oil massage using warm herbal oils to improve circulation and eliminate toxins from the body.",
-      duration: "60-90 minutes",
+      duration: "1-5 days",
       conditions: [
         "Muscle tension",
         "Poor circulation",
@@ -116,7 +116,7 @@ export default function AyurvedicTreatmentsPage() {
     },
     {
       id: "kizhi",
-      title: "Kizhi Herbal Poultice",
+      title: "Herbal Poultice",
       description:
         "Therapeutic treatment using heated herbal poultices to reduce inflammation and improve joint mobility.",
       duration: "45-60 minutes",
@@ -138,10 +138,10 @@ export default function AyurvedicTreatmentsPage() {
     },
     {
       id: "nasya",
-      title: "Nasya Nasal Therapy",
+      title: "Nasyam",
       description:
         "Specialized treatment involving medicated oils administered through the nasal passages to treat respiratory and neurological conditions.",
-      duration: "30-45 minutes",
+      duration: "5-10 days",
       conditions: ["Sinusitis", "Allergies", "Headaches", "Respiratory issues"],
       image: spaHeadMassage,
       benefits: [
@@ -158,7 +158,7 @@ export default function AyurvedicTreatmentsPage() {
       title: "Udvartana Herbal Scrub",
       description:
         "Invigorating herbal powder massage that helps reduce excess weight, improves skin texture, and enhances circulation.",
-      duration: "45-60 minutes",
+      duration: "5-15 days",
       conditions: [
         "Weight management",
         "Poor circulation",

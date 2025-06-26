@@ -11,14 +11,26 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Phone, Clock, MapPin, ArrowRight, Quote, Star } from "lucide-react";
+import {
+  Phone,
+  Clock,
+  MapPin,
+  ArrowRight,
+  Quote,
+  Star,
+  Leaf,
+  Heart,
+  Brain,
+  TreesIcon as Lungs,
+  StickerIcon as Stomach,
+  Sparkles,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import { useMounted } from "@/hooks/use-mounted";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import heroImage from "@/assets/images/treatment-3.jpg";
-import arthritisImage from "@/assets/images/treatment-1.jpg";
-import backpainImage from "@/assets/images/treatment-5.jpg";
-import spaImage from "@/assets/images/treatment-7.jpg";
 import aboutImage from "@/assets/images/treatment-6.jpg";
 import contactImage from "@/assets/images/treatment-4.jpg";
 
@@ -26,10 +38,53 @@ export default function HomePage() {
   const { t } = useLanguage();
   const mounted = useMounted();
   const [isVisible, setIsVisible] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
   useEffect(() => {
     if (mounted) {
       setIsVisible(true);
+    }
+  }, [mounted]);
+
+  // Check scroll position to show/hide arrows
+  const checkScrollPosition = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } =
+        scrollContainerRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+    }
+  };
+
+  // Scroll functions
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      const cardWidth = 320 + 24; // card width + gap
+      scrollContainerRef.current.scrollBy({
+        left: -cardWidth,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      const cardWidth = 320 + 24; // card width + gap
+      scrollContainerRef.current.scrollBy({
+        left: cardWidth,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener("scroll", checkScrollPosition);
+      checkScrollPosition(); // Initial check
+      return () => container.removeEventListener("scroll", checkScrollPosition);
     }
   }, [mounted]);
 
@@ -45,27 +100,85 @@ export default function HomePage() {
     );
   }
 
-  const treatments = [
+  // Comprehensive treatment categories
+  const treatmentCategories = [
     {
-      image: arthritisImage,
-      title: t("home.treatments.arthritis.title"),
-      description: t("home.treatments.arthritis.description"),
-      href: "/services/ayurvedic#arthritis",
-      alt: "Arthritis Treatment",
+      icon: <Leaf className="h-8 w-8" />,
+      title: "Pain Management",
+      description:
+        "Comprehensive care for chronic and lifestyle-related conditions",
+      treatments: [
+        "Arthritis (Osteoarthritis, Rheumatoid)",
+        "Sciatica and Nerve Compression",
+        "Back Pain (Lower and Upper)",
+        "Knee Pain and Joint Degeneration",
+        "Shoulder Pain and Frozen Shoulder",
+      ],
+      href: "/services/ayurvedic#pain-management",
     },
     {
-      image: backpainImage,
-      title: t("home.treatments.backPain.title"),
-      description: t("home.treatments.backPain.description"),
-      href: "/services/ayurvedic#back-pain",
-      alt: "Back Pain Relief",
+      icon: <Brain className="h-8 w-8" />,
+      title: "Neurological & Functional Disorders",
+      description:
+        "Specialized care for neurological and mental health conditions",
+      treatments: [
+        "Paralysis (Hemiplegia, Paraplegia)",
+        "Post-Stroke Rehabilitation",
+        "Migraine & Chronic Headaches",
+        "Insomnia & Sleep Disorders",
+        "Stress, Anxiety & Emotional Balance",
+      ],
+      href: "/services/ayurvedic#neurological",
     },
     {
-      image: spaImage,
-      title: t("home.treatments.spa.title"),
-      description: t("home.treatments.spa.description"),
+      icon: <Lungs className="h-8 w-8" />,
+      title: "Respiratory & Allergic Conditions",
+      description: "Natural treatments for breathing and allergic disorders",
+      treatments: [
+        "Asthma",
+        "Allergic Rhinitis",
+        "Sinusitis",
+        "Seasonal & Food Allergies",
+      ],
+      href: "/services/ayurvedic#respiratory",
+    },
+    {
+      icon: <Stomach className="h-8 w-8" />,
+      title: "Gastrointestinal & Metabolic Health",
+      description: "Holistic approach to digestive and metabolic wellness",
+      treatments: [
+        "Gastritis & Acid Reflux",
+        "Constipation & Indigestion",
+        "Diabetes Management",
+        "Weight Management & Obesity",
+        "Piles (Hemorrhoids)",
+      ],
+      href: "/services/ayurvedic#gastrointestinal",
+    },
+    {
+      icon: <Heart className="h-8 w-8" />,
+      title: "Women & Children's Health",
+      description: "Specialized care for women and pediatric health needs",
+      treatments: [
+        "Menstrual Irregularities (PCOS, PMS)",
+        "Pre/Postnatal Care",
+        "Pediatric Care & Immunity",
+        "Growth & Development Support",
+      ],
+      href: "/services/ayurvedic#womens-health",
+    },
+    {
+      icon: <Sparkles className="h-8 w-8" />,
+      title: "Skin & Hair Care + Spa Services",
+      description: "Natural beauty treatments and luxury wellness experiences",
+      treatments: [
+        "Eczema & Psoriasis",
+        "Acne & Skin Allergies",
+        "Hair Fall & Scalp Conditions",
+        "Luxury Spa Therapies",
+        "Detoxification Programs",
+      ],
       href: "/services/spa",
-      alt: "Luxury Spa Therapy",
     },
   ];
 
@@ -110,7 +223,7 @@ export default function HomePage() {
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight">
                   {t("home.hero.title")}
                 </h1>
-                <p className="text-lg sm:text-sm text-muted-foreground leading-relaxed max-w-lg">
+                <p className="text-xl sm:text-lg text-muted-foreground leading-relaxed max-w-lg">
                   {t("home.hero.subtitle")}
                 </p>
               </div>
@@ -157,7 +270,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Treatments */}
+      {/* Comprehensive Treatment Categories */}
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div
@@ -170,63 +283,132 @@ export default function HomePage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
               {t("home.treatments.title")}
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mx-auto">
-              {t("home.treatments.subtitle")}
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-4xl mx-auto">
+              Comprehensive Ayurvedic care for chronic, lifestyle, and systemic
+              health conditions. Our holistic approach addresses the root causes
+              of illness to promote complete healing and wellness.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {treatments.map((treatment, index) => (
-              <div
-                key={index}
-                className={`transform transition-all duration-1000 ${
-                  isVisible
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-8 opacity-0"
-                } delay-${400 + index * 200}`}
-              >
-                <Card className="h-full group hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 border-border/50 hover:border-primary/20 overflow-hidden">
-                  <div className="relative h-56 w-full overflow-hidden">
-                    <Image
-                      src={treatment.image || "/placeholder.svg"}
-                      alt={treatment.alt}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          {/* Scrollable Treatment Cards with Arrow Navigation */}
+          <div className="relative">
+            {/* Left Arrow */}
+            <button
+              onClick={scrollLeft}
+              className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-transparent hover:bg-black/10 dark:hover:bg-white/10 rounded-full p-3 transition-all duration-200 ${
+                canScrollLeft ? "opacity-100" : "opacity-0 pointer-events-none"
+              }`}
+              aria-label="Scroll left"
+            >
+              <ChevronLeft className="h-6 w-6 text-primary" />
+            </button>
+
+            {/* Right Arrow */}
+            <button
+              onClick={scrollRight}
+              className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-transparent hover:bg-black/10 dark:hover:bg-white/10 rounded-full p-3 transition-all duration-200 ${
+                canScrollRight ? "opacity-100" : "opacity-0 pointer-events-none"
+              }`}
+              aria-label="Scroll right"
+            >
+              <ChevronRight className="h-6 w-6 text-primary" />
+            </button>
+
+            {/* Scrollable Container */}
+            <div
+              ref={scrollContainerRef}
+              className="overflow-x-auto scrollbar-hide mx-8"
+              style={{
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+              }}
+            >
+              <style jsx>{`
+                div::-webkit-scrollbar {
+                  display: none;
+                }
+              `}</style>
+              <div className="flex gap-6 pb-4" style={{ width: "max-content" }}>
+                {treatmentCategories.map((category, index) => (
+                  <div
+                    key={index}
+                    className={`transform transition-all duration-1000 ${
+                      isVisible
+                        ? "translate-y-0 opacity-100"
+                        : "translate-y-8 opacity-0"
+                    } delay-${400 + index * 150}`}
+                    style={{
+                      width: "calc((100vw - 8rem) / 3.5)",
+                      minWidth: "280px",
+                      maxWidth: "320px",
+                    }}
+                  >
+                    <Card className="h-full group hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 bg-primary border-primary/20 hover:border-primary/40">
+                      <CardHeader className="pb-3">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="text-white">{category.icon}</div>
+                          <CardTitle className="text-xl text-white group-hover:text-white/90 transition-colors">
+                            {category.title}
+                          </CardTitle>
+                        </div>
+                        <CardDescription className="text-sm text-white/80">
+                          {category.description}
+                        </CardDescription>
+                      </CardHeader>
+
+                      <CardContent className="flex-1">
+                        <div className="space-y-2">
+                          <p className="text-sm font-medium text-white/90 mb-3">
+                            Key Treatments:
+                          </p>
+                          <ul className="space-y-2">
+                            {category.treatments
+                              .slice(0, 4)
+                              .map((treatment, idx) => (
+                                <li
+                                  key={idx}
+                                  className="flex items-start gap-2 text-sm text-white/80"
+                                >
+                                  <span className="text-white text-xs mt-1">
+                                    •
+                                  </span>
+                                  <span>{treatment}</span>
+                                </li>
+                              ))}
+                            {category.treatments.length > 4 && (
+                              <li className="text-sm text-white font-medium">
+                                +{category.treatments.length - 4} more
+                                conditions
+                              </li>
+                            )}
+                          </ul>
+                        </div>
+                      </CardContent>
+
+                      <CardFooter className="pt-4">
+                        <Button
+                          variant="ghost"
+                          className="p-0 h-auto text-white hover:text-white/90 group/button hover:bg-transparent w-full justify-start"
+                          asChild
+                        >
+                          <Link
+                            href={category.href}
+                            className="flex items-center gap-2"
+                          >
+                            Learn More
+                            <ArrowRight className="h-4 w-4 group-hover/button:translate-x-1 transition-transform duration-200" />
+                          </Link>
+                        </Button>
+                      </CardFooter>
+                    </Card>
                   </div>
-                  <CardHeader className="pb-4">
-                    <CardTitle className="text-xl group-hover:text-primary/80 transition-colors">
-                      {treatment.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-1">
-                    <CardDescription className="text-base leading-relaxed">
-                      {treatment.description}
-                    </CardDescription>
-                  </CardContent>
-                  <CardFooter className="pt-4">
-                    <Button
-                      variant="ghost"
-                      className="p-0 h-auto text-primary group/button hover:bg-transparent"
-                      asChild
-                    >
-                      <Link
-                        href={treatment.href}
-                        className="flex items-center gap-2"
-                      >
-                        {t("home.treatments.viewAll")}
-                        <ArrowRight className="h-4 w-4 group-hover/button:translate-x-1 transition-transform duration-200" />
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
 
           <div
-            className={`flex justify-center mt-12 transform transition-all duration-1000 delay-1000 ${
+            className={`flex justify-center mt-12 transform transition-all duration-1000 delay-1200 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-8 opacity-0"
@@ -239,7 +421,7 @@ export default function HomePage() {
               className="hover:scale-105 transition-all duration-200 hover:bg-primary hover:text-primary-foreground"
             >
               <Link href="/services" className="flex items-center gap-2">
-                {t("home.treatments.viewAll")}
+                View All Treatment Categories
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
