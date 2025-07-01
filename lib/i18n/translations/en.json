@@ -49,8 +49,11 @@
     },
     "about": {
       "title": "Authentic Kerala Ayurveda",
-      "paragraph1": "Experience the authentic healing traditions of Kerala Ayurveda, brought to Sri Lanka with over two decades of expertise in traditional medicine and holistic wellness.",
-      "paragraph2": "Our center combines ancient wisdom with modern comfort, offering personalized treatments that address the root causes of illness while promoting overall well-being.",
+      "paragraph1": "At MK Ayur Vaidya Sala hospital, we bring the timeless wisdom of Kerala Ayurveda to Sri Lanka, offering authentic, holistic treatments that nurture the body, mind, and spirit.",
+      "paragraph2": "Founded by experienced Ayurvedic practitioners, our hospital combines centuries-old healing traditions with modern care standards to deliver personalized wellness journeys.",
+      "paragraph3": "We believe true healing comes from restoring balance within. Our expert team uses pure herbal medicines, traditional therapies, and individualized care plans to help you achieve optimal health naturally.",
+      "paragraph4": "Nestled in a serene setting, MK Ayur Vaidya Sala is a sanctuary where you can experience the genuine essence of Kerala Ayurveda, guided by compassionate hands and ancient knowledge.",
+      "paragraph5": "Whether you seek relief from chronic conditions, rejuvenation, or preventive care, we are committed to walking with you on your path to wellness.",
       "learnMore": "Learn More About Us"
     },
     "testimonials": {
@@ -95,19 +98,12 @@
       "subtitle": "Meet our qualified practitioners who are dedicated to your wellness journey",
       "members": [
         {
-          "name": "Dr. Rajitha Perera",
-          "role": "Chief Ayurvedic Physician",
-          "bio": "With over 20 years of experience in traditional Ayurveda, Dr. Perera specializes in chronic disease management and panchakarma treatments."
+          "name": "Dr. Vishmi Vithanage",
+          "role": "Chief Ayurvedic Physician"
         },
         {
-          "name": "Dr. Amali Silva",
-          "role": "Senior Ayurvedic Consultant",
-          "bio": "Expert in women's health and pediatric Ayurveda, Dr. Silva brings 15 years of clinical experience to our center."
-        },
-        {
-          "name": "Dr. Nimal Jayawardena",
-          "role": "Panchakarma Specialist",
-          "bio": "Specialized in detoxification and rejuvenation therapies, Dr. Jayawardena has trained extensively in Kerala's traditional methods."
+          "name": "Dr. Saulika Wijesinghe",
+          "role": "Chief Ayurvedic Physician"
         }
       ]
     },

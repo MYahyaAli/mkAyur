@@ -513,28 +513,28 @@ export default function HomePage() {
                     : "translate-y-8 opacity-0"
                 } delay-${600 + index * 200}`}
               >
-                <Card className="h-full group hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 border-border/50 hover:border-primary/20">
+                <Card className="h-full group hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 bg-primary border-primary/20 hover:border-primary/40">
                   <CardContent className="pt-8 flex-1">
                     <div className="mb-6">
-                      <Quote className="h-10 w-10 text-primary/30 mb-4" />
+                      <Quote className="h-10 w-10 text-primary/30 mb-4 text-white" />
                       <div className="flex gap-1 mb-4">
                         {[...Array(testimonial.rating)].map((_, i) => (
                           <Star
                             key={i}
-                            className="h-4 w-4 fill-primary text-primary"
+                            className="h-4 w-4 fill-primary text-primary text-zinc-300"
                           />
                         ))}
                       </div>
                     </div>
-                    <p className="text-muted-foreground italic text-lg leading-relaxed">
+                    <p className="text-muted-foreground italic text-lg leading-relaxed text-white">
                       "{testimonial.quote}"
                     </p>
                   </CardContent>
                   <CardFooter className="border-t pt-6 flex flex-col items-start space-y-1">
-                    <p className="font-semibold text-primary">
+                    <p className="font-semibold text-primary text-white">
                       {testimonial.name}
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground text-zinc-300">
                       {testimonial.location}
                     </p>
                   </CardFooter>

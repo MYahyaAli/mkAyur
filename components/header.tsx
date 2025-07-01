@@ -12,9 +12,8 @@ import { useLanguage } from "@/lib/i18n";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { useMounted } from "@/hooks/use-mounted";
-import logoImg from "@/assets/images/logo.jpg";
 
-export default function Header() { 
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { t } = useLanguage();
@@ -88,14 +87,14 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative overflow-hidden rounded-full">
             <Image
-              src={logoImg}
+              src="/images/logo.jpg"
               alt="MK Kerala Ayurveda Logo"
               width={40}
               height={40}
               className="rounded-full transition-transform duration-300 group-hover:scale-110"
             />
           </div>
-          <span className="text-lg font-semibold text-primary group-hover:text-primary/80 transition-colors duration-200">
+          <span className="text-lg font-semibold text-primary group-hover:text-primary/80 transition-colors duration-200 font-cormorant">
             MK Kerala Ayurveda
           </span>
         </Link>
@@ -165,7 +164,7 @@ export default function Header() {
                     height={32}
                     className="rounded-full"
                   />
-                  <span className="text-lg font-semibold text-primary">
+                  <span className="text-lg font-semibold text-primary font-cormorant">
                     MK Kerala Ayurveda
                   </span>
                 </Link>

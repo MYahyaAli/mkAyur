@@ -76,6 +76,15 @@ export default function AboutPage() {
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   {t("about.story.paragraph2")}
                 </p>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  {t("home.about.paragraph3")}
+                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  {t("home.about.paragraph4")}
+                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  {t("home.about.paragraph5")}
+                </p>
               </div>
             </div>
             <div
@@ -139,19 +148,19 @@ export default function AboutPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className={`bg-card rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-xl hover:border-primary/20 transition-all duration-500 group transform ${
+                className={`bg-primary rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-xl hover:border-primary/20 transition-all duration-500 group transform ${
                   isVisible
                     ? "translate-y-0 opacity-100"
                     : "translate-y-8 opacity-0"
                 } ${item.delay}`}
               >
                 <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                  <item.icon className="h-12 w-12 text-primary" />
+                  <item.icon className="h-12 w-12 text-primary text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-primary mb-4 group-hover:text-primary/80 transition-colors">
+                <h3 className="text-xl font-semibold text-primary mb-4 group-hover:text-zinc-200 transition-colors text-white">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-zinc-300">
                   {item.description}
                 </p>
               </div>
@@ -177,8 +186,8 @@ export default function AboutPage() {
               {t("about.team.subtitle")}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[0, 1, 2].map((index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {[0, 1].map((index) => (
               <div
                 key={index}
                 className={`bg-card rounded-2xl overflow-hidden shadow-lg border border-border/50 text-center p-8 hover:shadow-xl hover:border-primary/20 transition-all duration-500 group transform ${
@@ -187,23 +196,23 @@ export default function AboutPage() {
                     : "translate-y-8 opacity-0"
                 } delay-${600 + index * 200}`}
               >
-                <div className="relative w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 group-hover:scale-105 transition-transform duration-300">
+                {/* <div className="relative w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 group-hover:scale-105 transition-transform duration-300">
                   <Image
                     src={profile || "/placeholder.svg"}
                     alt={t(`about.team.members.${index}.name`)}
                     fill
                     className="object-cover"
                   />
-                </div>
+                </div> */}
                 <h3 className="text-xl font-semibold mb-2 text-primary group-hover:text-primary/80 transition-colors">
                   {t(`about.team.members.${index}.name`)}
                 </h3>
                 <p className="text-muted-foreground mb-4 font-medium">
                   {t(`about.team.members.${index}.role`)}
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                {/* <p className="text-muted-foreground leading-relaxed">
                   {t(`about.team.members.${index}.bio`)}
-                </p>
+                </p> */}
               </div>
             ))}
           </div>

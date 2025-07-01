@@ -31,6 +31,10 @@
     --input: 0 0% 89.8%;
     --ring: 142 25% 30%;
     --radius: 0.5rem;
+
+    /* Font variables */
+    --font-cormorant: "Cormorant Garamond", serif;
+    --font-poppins: "Poppins", sans-serif;
   }
 
   .dark {
@@ -73,6 +77,26 @@
   }
 }
 
+/* Custom font classes */
+.font-cormorant {
+  font-family: var(--font-cormorant);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+/* Brand title styling */
+.brand-title {
+  font-family: var(--font-cormorant);
+  font-weight: 500;
+}
+
+.brand-tagline {
+  font-family: var(--font-poppins);
+  font-weight: 200;
+}
+
 /* Scrollbar Hide Utility */
 @layer utilities {
   .scrollbar-hide {
@@ -83,4 +107,35 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+}
+
+/* Animation utilities */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-from-top {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+.slide-in-from-top-2 {
+  animation: slide-in-from-top 0.2s ease-out;
 }

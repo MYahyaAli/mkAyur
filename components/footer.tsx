@@ -47,9 +47,17 @@ export default function Footer() {
   }
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Mail, href: "mailto:info@mkayurveda.com", label: "Email" },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/mk.ayurveda.2025",
+      label: "Facebook",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/ayurvedamk?igsh=MWhoOW45OGppajgwZA%3D%3D",
+      label: "Instagram",
+    },
+    { icon: Mail, href: "mailto:home@mkayur.lk", label: "Email" },
   ];
 
   const quickLinks = [
@@ -72,6 +80,13 @@ export default function Footer() {
     },
   ];
 
+  const phoneNumbers = [
+    { number: "(011) 253 2891", type: "Main Line" },
+    { number: "(011) 253 0238", type: "Reception" },
+    { number: "(075) 669 1733", type: "Whatsapp" },
+    { number: "(075) 376 9556", type: "Mobile" },
+  ];
+
   return (
     <footer className="w-full border-t border-white/20 bg-primary py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -88,7 +103,7 @@ export default function Footer() {
                   className="rounded-full transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
-              <span className="text-lg font-semibold text-white group-hover:text-white/90 transition-colors">
+              <span className="text-lg font-semibold text-white group-hover:text-white/90 transition-colors font-cormorant">
                 MK Kerala Ayurveda
               </span>
             </Link>
@@ -166,19 +181,39 @@ export default function Footer() {
                   123 Ayurveda Road, Colombo 05, Sri Lanka
                 </span>
               </li>
+
+              {/* Phone Numbers Section */}
               <li className="flex items-start gap-3 group">
                 <div className="p-1.5 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors">
-                  <Phone className="h-4 w-4 text-white flex-shrink-0" />
+                  <Phone className="h-4 w-4 text-white flex-shrink-0 mt-0.5" />
                 </div>
-                <span className="text-sm text-white/80">+94 11 234 5678</span>
+                <div className="space-y-2">
+                  {phoneNumbers.map((phone, index) => (
+                    <div key={index} className="flex flex-col">
+                      <a
+                        href={`tel:${phone.number.replace(/[^\d+]/g, "")}`}
+                        className="text-sm text-white/80 hover:text-white transition-colors duration-200"
+                      >
+                        {phone.number}
+                      </a>
+                      <span className="text-xs text-white/60">
+                        {phone.type}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </li>
+
               <li className="flex items-start gap-3 group">
                 <div className="p-1.5 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors">
                   <Mail className="h-4 w-4 text-white flex-shrink-0" />
                 </div>
-                <span className="text-sm text-white/80">
-                  info@mkayurveda.com
-                </span>
+                <a
+                  href="mailto:info@mkayurveda.com"
+                  className="text-sm text-white/80 hover:text-white transition-colors duration-200"
+                >
+                  home@mkayur.lk
+                </a>
               </li>
             </ul>
           </div>
