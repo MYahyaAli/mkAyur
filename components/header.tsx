@@ -12,6 +12,7 @@ import { useLanguage } from "@/lib/i18n";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { useMounted } from "@/hooks/use-mounted";
+import logoImg from "@/assets/images/logo.jpg";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -87,7 +88,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative overflow-hidden rounded-full">
             <Image
-              src="/images/logo.jpg"
+              src={logoImg || "/placeholder.svg"}
               alt="MK Kerala Ayurveda Logo"
               width={40}
               height={40}
