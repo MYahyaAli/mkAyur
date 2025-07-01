@@ -1,7 +1,6 @@
 "use client";
 
 import type React from "react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -83,13 +82,13 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: t("contact.getInTouch.phone"),
-      primary: "+94 11 234 5678",
+      primary: "(011) 253 2891",
       secondary: "Mon-Sat: 8am - 6pm",
     },
     {
       icon: Mail,
       title: t("contact.getInTouch.email"),
-      primary: "info@ayurvedicenter.lk",
+      primary: "home@mkayur.lk",
       secondary: t("contact.getInTouch.responseTime"),
     },
     {
@@ -101,7 +100,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: t("contact.getInTouch.address"),
-      primary: "123 Ayurveda Road, Colombo 05",
+      primary: "90/10, Meetotamulla Road, Kollonnawa",
       secondary: "Sri Lanka",
     },
   ];
@@ -194,18 +193,18 @@ export default function ContactPage() {
                 }`}
               >
                 <div className="relative h-[300px] lg:h-[400px] rounded-2xl overflow-hidden shadow-2xl group">
-                  <Image
-                    src="/placeholder.svg?height=800&width=1200"
-                    alt="Map location of our Ayurvedic Medical Center"
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3960.630873841439!2d79.88234987499662!3d6.934644993065291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTYnMDQuNyJOIDc5wrA1MycwNS43IkU!5e0!3m2!1sen!2slk!4v1751386606373!5m2!1sen!2slk"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="transition-transform duration-700 group-hover:scale-105"
+                    title="MK Kerala Ayurveda Location"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="bg-primary/90 backdrop-blur-sm text-primary-foreground px-4 py-2 rounded-lg font-medium">
-                      📍 Our Location
-                    </div>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </div>
               </div>
             </div>

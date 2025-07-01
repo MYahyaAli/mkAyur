@@ -521,7 +521,7 @@ export default function HomePage() {
                         {[...Array(testimonial.rating)].map((_, i) => (
                           <Star
                             key={i}
-                            className="h-4 w-4 fill-primary text-primary text-zinc-300"
+                            className="h-4 w-4 fill-zinc-300 text-zinc-300"
                           />
                         ))}
                       </div>
@@ -575,7 +575,7 @@ export default function HomePage() {
                   </CardHeader>
                   <CardContent className="space-y-1">
                     <p className="text-muted-foreground">+94 11 234 5678</p>
-                    <p className="text-muted-foreground">info@mkayurveda.com</p>
+                    <p className="text-muted-foreground">home@mkayur.lk</p>
                   </CardContent>
                 </Card>
 
@@ -603,7 +603,7 @@ export default function HomePage() {
                   </CardHeader>
                   <CardContent className="space-y-1">
                     <p className="text-muted-foreground">
-                      123 Ayurveda Road, Colombo 05
+                      90/10, Meetotamulla Road, Kollonnawa
                     </p>
                     <p className="text-muted-foreground">Sri Lanka</p>
                   </CardContent>

@@ -178,7 +178,7 @@ export default function Footer() {
                   <MapPin className="h-4 w-4 text-white flex-shrink-0" />
                 </div>
                 <span className="text-sm text-white/80 leading-relaxed">
-                  123 Ayurveda Road, Colombo 05, Sri Lanka
+                  90/10, Meetotamulla Road, Kollonnawa
                 </span>
               </li>
 
@@ -209,7 +209,7 @@ export default function Footer() {
                   <Mail className="h-4 w-4 text-white flex-shrink-0" />
                 </div>
                 <a
-                  href="mailto:info@mkayurveda.com"
+                  href="mailto:home@mkayur.lk"
                   className="text-sm text-white/80 hover:text-white transition-colors duration-200"
                 >
                   home@mkayur.lk

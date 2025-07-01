@@ -21,7 +21,6 @@ export default function Header() {
   const pathname = usePathname();
   const mounted = useMounted();
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -30,7 +29,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
   }, [pathname]);
@@ -47,8 +45,8 @@ export default function Header() {
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-muted animate-pulse"></div>
-            <div className="h-6 w-40 bg-muted rounded animate-pulse"></div>
+            <div className="w-10 h-10 rounded-full bg-muted animate-pulse" />
+            <div className="h-6 w-40 bg-muted rounded animate-pulse" />
           </div>
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center gap-6">
@@ -56,18 +54,18 @@ export default function Header() {
                 <div
                   key={i}
                   className="h-4 w-16 bg-muted rounded animate-pulse"
-                ></div>
+                />
               ))}
-              <div className="h-10 w-32 bg-muted rounded animate-pulse"></div>
+              <div className="h-10 w-32 bg-muted rounded animate-pulse" />
               <div className="flex items-center gap-4">
-                <div className="h-8 w-8 bg-muted rounded-full animate-pulse"></div>
-                <div className="h-8 w-8 bg-muted rounded-full animate-pulse"></div>
+                <div className="h-8 w-8 bg-muted rounded-full animate-pulse" />
+                <div className="h-8 w-8 bg-muted rounded-full animate-pulse" />
               </div>
             </div>
             <div className="md:hidden flex items-center gap-2">
-              <div className="h-8 w-8 bg-muted rounded-full animate-pulse"></div>
-              <div className="h-8 w-8 bg-muted rounded-full animate-pulse"></div>
-              <div className="h-8 w-8 bg-muted rounded-full animate-pulse"></div>
+              <div className="h-8 w-8 bg-muted rounded-full animate-pulse" />
+              <div className="h-8 w-8 bg-muted rounded-full animate-pulse" />
+              <div className="h-8 w-8 bg-muted rounded-full animate-pulse" />
             </div>
           </div>
         </div>
@@ -88,7 +86,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative overflow-hidden rounded-full">
             <Image
-              src={logoImg || "/placeholder.svg"}
+              src={logoImg}
               alt="MK Kerala Ayurveda Logo"
               width={40}
               height={40}
@@ -152,20 +150,20 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-80">
-              <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center justify-between mb-8 m-5">
                 <Link
                   href="/"
                   className="flex items-center gap-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <Image
-                    src="/images/logo.jpg"
+                    src={logoImg}
                     alt="MK Kerala Ayurveda Logo"
-                    width={32}
-                    height={32}
+                    width={52}
+                    height={52}
                     className="rounded-full"
                   />
-                  <span className="text-lg font-semibold text-primary font-cormorant">
+                  <span className="text-xl font-semibold text-primary font-cormorant">
                     MK Kerala Ayurveda
                   </span>
                 </Link>
@@ -174,32 +172,23 @@ export default function Header() {
                   size="icon"
                   onClick={() => setIsMenuOpen(false)}
                   className="hover:bg-primary/10"
-                >
-                  <X className="h-5 w-5" />
-                </Button>
+                />
               </div>
-              <nav className="flex flex-col gap-6">
+
+              <nav className="flex flex-col gap-6 list-none m-5">
                 {navigation.map((item, index) => (
                   <Link
                     key={item.name}
                     href={item.href}
+                    onClick={() => setIsMenuOpen(false)}
                     className={cn(
-                      "text-lg font-medium transition-all duration-200 hover:text-primary hover:translate-x-2 flex items-center gap-3 py-2",
+                      "text-lg font-bold transition-all duration-200 hover:text-primary hover:translate-x-2 flex items-center gap-3 py-2 list-none",
                       pathname === item.href
                         ? "text-primary"
                         : "text-muted-foreground"
                     )}
-                    onClick={() => setIsMenuOpen(false)}
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
-                    <div
-                      className={cn(
-                        "w-2 h-2 rounded-full transition-all duration-200",
-                        pathname === item.href
-                          ? "bg-primary"
-                          : "bg-muted-foreground/30"
-                      )}
-                    />
                     {item.name}
                   </Link>
                 ))}
