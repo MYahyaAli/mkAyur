@@ -57,7 +57,7 @@ export default function Footer() {
       href: "https://www.instagram.com/ayurvedamk?igsh=MWhoOW45OGppajgwZA%3D%3D",
       label: "Instagram",
     },
-    { icon: Mail, href: "mailto:home@mkayur.lk", label: "Email" },
+    { icon: Mail, href: "mailto:mkayurvedahospital@gmail.com", label: "Email" },
   ];
 
   const quickLinks = [
@@ -84,7 +84,6 @@ export default function Footer() {
     { number: "(011) 253 2891", type: "Main Line" },
     { number: "(011) 253 0238", type: "Reception" },
     { number: "(075) 669 1733", type: "Whatsapp" },
-    { number: "(075) 376 9556", type: "Mobile" },
   ];
 
   return (
@@ -209,10 +208,10 @@ export default function Footer() {
                   <Mail className="h-4 w-4 text-white flex-shrink-0" />
                 </div>
                 <a
-                  href="mailto:home@mkayur.lk"
+                  href="mailto:mkayurvedahospital@gmail.com"
                   className="text-sm text-white/80 hover:text-white transition-colors duration-200"
                 >
-                  home@mkayur.lk
+                  mkayurvedahospital@gmail.com
                 </a>
               </li>
             </ul>

@@ -575,7 +575,7 @@ export default function HomePage() {
                   </CardHeader>
                   <CardContent className="space-y-1">
                     <p className="text-muted-foreground">+94 11 234 5678</p>
-                    <p className="text-muted-foreground">home@mkayur.lk</p>
+                    <p className="text-muted-foreground">mkayurvedahospital@gmail.com</p>
                   </CardContent>
                 </Card>
 

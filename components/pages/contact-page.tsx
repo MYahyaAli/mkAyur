@@ -82,20 +82,20 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: t("contact.getInTouch.phone"),
-      primary: "(011) 253 2891",
+      primary: "(075) 669 1733",
       secondary: "Mon-Sat: 8am - 6pm",
     },
     {
       icon: Mail,
       title: t("contact.getInTouch.email"),
-      primary: "home@mkayur.lk",
+      primary: "mkayurvedahospital@gmail.com",
       secondary: t("contact.getInTouch.responseTime"),
     },
     {
       icon: Clock,
       title: t("contact.getInTouch.hours"),
-      primary: "Monday - Saturday: 8am - 6pm",
-      secondary: "Sunday: 9am - 1pm",
+      primary: "Monday - Sunday: 8:30 AM - 8 PM",
+      secondary: "Open Daily",
     },
     {
       icon: MapPin,
